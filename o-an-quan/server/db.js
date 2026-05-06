@@ -5,10 +5,10 @@
 const mysql = require('mysql2/promise');
 
 const pool = mysql.createPool({
-    host: process.env.MYSQLHOST || 'localhost',
-    port: parseInt(process.env.MYSQLPORT) || 3306,
-    user: process.env.MYSQLUSER || 'python',
-    password: process.env.MYSQLPASSWORD || '12345',
+    host: process.env.MYSQLHOST || 'gateway01.ap-southeast-1.prod.aws.tidbcloud.com',
+    port: parseInt(process.env.MYSQLPORT) || 4000,
+    user: process.env.MYSQLUSER || '2e6TRD3nBAkVtKV.root',
+    password: process.env.MYSQLPASSWORD || 'CDVMD6xFnn0Sl1mO',
     database: process.env.MYSQLDATABASE || 'o_an_quan_db',
     waitForConnections: true,
     connectionLimit: 10,
