@@ -5,11 +5,11 @@
 const mysql = require('mysql2/promise');
 
 const pool = mysql.createPool({
-    host: 'localhost',
-    port: 3306,
-    user: 'python',
-    password: '12345',
-    database: 'o_an_quan_db',
+    host: process.env.MYSQLHOST || 'localhost',
+    port: parseInt(process.env.MYSQLPORT) || 3306,
+    user: process.env.MYSQLUSER || 'python',
+    password: process.env.MYSQLPASSWORD || '12345',
+    database: process.env.MYSQLDATABASE || 'o_an_quan_db',
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,

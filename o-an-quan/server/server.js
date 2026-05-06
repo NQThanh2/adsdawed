@@ -84,11 +84,11 @@ io.on('connection', (socket) => {
 
 // ===== Start Server =====
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
     console.log('');
     console.log('╔═══════════════════════════════════════╗');
     console.log('║     🎮  Ô Ăn Quan Server Started     ║');
-    console.log(`║     🌐  http://localhost:${PORT}          ║`);
+    console.log(`║     🌐  Port: ${PORT}                      ║`);
     console.log('║     📡  WebSocket ready               ║');
     console.log('╚═══════════════════════════════════════╝');
     console.log('');
